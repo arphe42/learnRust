@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "rust environment";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -28,6 +28,9 @@
       };
 
     in {
+      packages = {
+        rustPackage = myRustBuild;
+      };
       defaultPackage = myRustBuild;
       devShell = pkgs.mkShell {
         buildInputs = 
