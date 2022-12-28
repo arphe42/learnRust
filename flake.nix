@@ -20,7 +20,7 @@
       };
 
       myRustBuild = rustPlatform.buildRustPackage {
-        pname = "rust_nix_test";
+        pname = "rust";
         version = "0.1.0";
         src = ./.;
 
